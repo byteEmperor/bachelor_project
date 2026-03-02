@@ -47,3 +47,15 @@ following 6 terms:
     \item Esym: symmetry restraints energy (NCS and C2/C3/C5 terms)
 \end{itemize}
 
+As the weights for each of the scoring function components differs for the various
+available CNS module, they will be described in each of the modules. These weights
+can be tuned by the user, by modifying their related parameters:
+\begin{itemize}
+    \item \verb|w_elec|: to tune the electrostatic intermolecular energy weight
+    \item \verb|w_vdw|: to tune the van der Waals intermolecular energy weight
+    \item \verb|w_desolv|: to tune the desolvation energy weight
+    \item \verb|w_bsa|: to tune the buried surface area weight
+    \item \verb|w_air|: to tune the distance restraints energy weight
+    \item \verb|w_sym|: to tune the symmetry restraints energy (NCS and C2/C3/C5 terms) weight
+\end{itemize}
+
