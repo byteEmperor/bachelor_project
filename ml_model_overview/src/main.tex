@@ -1,0 +1,86 @@
+%! Author = nat
+%! Date = 3/1/26
+
+% Preamble
+\documentclass[a4paper, 12pt]{article}
+
+% Packages
+\usepackage{amsmath,amsthm,amssymb,amscd}
+\usepackage[utf8]{inputenc}  % only for pdfLaTeX
+\usepackage{mathrsfs}
+\usepackage{esvect}
+\usepackage{listings}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{wrapfig}
+\usepackage{hyperref}
+\usepackage{xurl}
+\usepackage{xcolor}
+\usepackage{svg}
+\usepackage{subcaption}
+\usepackage{fancyhdr}
+\usepackage{enumerate}
+\usepackage[a4paper,margin=2cm]{geometry}
+
+%\hypersetup{colorlinks, linkcolor={black}, citecolor={blue}, urlcolor={blue}}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=rosepineblue,
+    urlcolor=rosepineblue,
+    citecolor=rosepinegreen
+}
+
+\usepackage[backend=biber,style=numeric]{biblatex}
+\addbibresource{main.bib}  % your bibliography file
+
+\usepackage{rosepinetheme}
+\lstset{style=rosepine}  % optional, for code listings
+
+% Document
+\begin{document}
+
+    \pagestyle{fancy}
+    \fancyhf{}
+    \rhead{A.C. Dirjan}
+    \lhead{Machine Learning Models Overview}
+    \fancyfoot[L]{Bachelor Project}
+    \fancyfoot[R]{Page \thepage}
+
+    \begin{titlepage}
+        \centering
+        \noindent\rule{\linewidth}{0.4pt} \\
+        {\scshape \Huge Machine Learning Models Overview \\
+        \vspace{0.5cm} \Large A comprehensive overview of the Surfdock, Haddock3, and Diffdock ML models \par}
+        \noindent\rule{\linewidth}{0.4pt} \\
+        \vspace{5cm}
+        {\scshape \Large Bachelor Project \\ 2025-2026 \par}
+        \vspace{1cm}
+        {\includegraphics[width=0.25\textwidth]{university_logo.png}\par}
+        \vspace{1cm}
+        {\scshape \LARGE University of Groningen \\
+        \Large Faculty of Science and Engineering \par}
+        \vspace{2cm}
+        \vfill
+        {\scshape \Large Andrei C. Dirjan (S4407814) \par}
+        \vfill
+        {\scshape \Large 01 March 2026 \par}
+
+        \thispagestyle{empty}
+
+    \end{titlepage}
+
+    \setcounter{page}{2}
+
+    \tableofcontents
+    \thispagestyle{fancy}
+
+    \vspace{0.5cm}
+    \noindent\rule{\linewidth}{0.4pt} \\
+
+    \section{What is Machine Learning}
+    \input{./inputs/what_is_ml.tex}
+
+    \section{References}
+    \printbibliography
+
+\end{document}

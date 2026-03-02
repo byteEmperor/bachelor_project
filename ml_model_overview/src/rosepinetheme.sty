@@ -1,0 +1,39 @@
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{rosepinetheme}[2026/03/01 Rose Pine Moon Theme]
+\RequirePackage{xcolor}
+\RequirePackage{pagecolor}
+
+% --- Base colors ---
+\definecolor{rosepinebg}{HTML}{232136}          % primaryBackground
+\definecolor{rosepinetext}{HTML}{e0def4}        % primaryForeground
+\definecolor{rosepinepanel}{HTML}{2a273f}       % panelBackground
+\definecolor{rosepinesecondary}{HTML}{393552}   % secondaryBackground
+\definecolor{rosepinehover}{HTML}{44415a}       % hoverBackground / selectionBackground
+\definecolor{rosepineborder}{HTML}{56526e}      % border/separator
+
+% --- Accents ---
+\definecolor{rosepineblue}{HTML}{3e8fb0}        % accent blue
+\definecolor{rosepinegreen}{HTML}{3a4765}       % accent green
+\definecolor{rosepinepink}{HTML}{ea9a97}        % accent pink / warning
+\definecolor{rosepinepurple}{HTML}{c4a7e7}      % accent purple
+\definecolor{rosepineyellow}{HTML}{f6c177}      % accent yellow
+\definecolor{rosepinered}{HTML}{eb6f92}         % accent red / error
+
+% --- Page setup ---
+\pagecolor{rosepinebg}        % background
+\color{rosepinetext}          % main text color
+
+% --- Listings support (if you use code) ---
+\RequirePackage{listings}
+\lstdefinestyle{rosepine}{
+    backgroundcolor=\color{rosepinepanel},
+    basicstyle=\ttfamily\color{rosepinetext},
+    keywordstyle=\color{rosepinepurple}\bfseries,
+    commentstyle=\color{rosepinesecondary}\itshape,
+    stringstyle=\color{rosepineyellow},
+    identifierstyle=\color{rosepinetext},
+    numberstyle=\tiny\color{rosepinehover},
+    rulecolor=\color{rosepineborder},
+    breaklines=true,
+    showstringspaces=false
+}
