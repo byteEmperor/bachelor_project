@@ -2,3 +2,48 @@
 %! Date = 3/2/26
 
 % Preamble
+HADDOCK stands for High Ambiguity Driven protein-protein DOCKing, is a
+widely used computational tool for the integrative modelling of biomolecular
+interactions. It integrates various types of experimental data, biochemical,
+biophysical, bioinformatic prediction, and knowledge  to guide the docking
+process.
+
+Haddpcl harnesses the power of CNS (Crystallography and NMR System) for
+structure calculation of molecular complexes. What distinguishes Haddock from
+other docking software is its ability, inherited from CNS, to incorporate
+experimental data as restraints and use these to guide the docking process
+alongside traditional energetics and shape complementarity. Moreover, the
+intimate coupling with CNS endows Haddock with the ability to actually produce
+models of sufficient quality to be archived in the Protein Data Bank.
+
+A central aspect of HADDOCK is the definition of Ambiguous Interaction
+Restraints or AIRs. These allow the translation of raw data such as NMR
+chemical shift perturbation or mutagenesis experiments into distance
+restraints that are incorporated into the energy function used in the calculations.
+AIRs are defined through a list of residues that fall under two categories:
+active and passive. Generally, active residues are those of central importance
+for the interaction, such as residues whose knockouts abolish the interaction or
+those where the chemical shift perturbation is higher. Throughout the simulation,
+these active residues are restrained to be part of the interface, if possible,
+otherwise incurring a scoring penalty. Passive residues are those that contribute
+to the interaction but are deemed of less importance. If such a residue does
+not belong in the interface there is no scoring penalty. Hence, a careful
+selectoin of which residues are active and which are passive is critical for the
+success of the docking.
+
+\subsection{HADDOCK scoring function}
+CNS modules use the HADDOCK scoring function to score and rank generated models.
+The HADDOCK scoring function consists of a linear combination of various weighted
+physics-based energy terms and buried surface area.
+
+The scoring is performed according to the weighted sum (HADDOCK score) of the
+following 6 terms:
+\begin{itemize}
+    \item Eelec: electrostatic intermolecular energy
+    \item Evdw: van der Waals intermolecular energy
+    \item Edesol: desolvation energy
+    \item BSA: buried surface area
+    \item Eair: distance restraints energy (only unambigous and AIR (ambig) restraints)
+    \item Esym: symmetry restraints energy (NCS and C2/C3/C5 terms)
+\end{itemize}
+
